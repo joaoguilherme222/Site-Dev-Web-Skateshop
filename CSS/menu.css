@@ -71,6 +71,10 @@
     border-left: 8px solid var(--cor_b);
 }
 
+.dropdown-submenu:hover{
+    display: block;
+}
+
 .main.active {
     background-color: black;
 }

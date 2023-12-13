@@ -1,55 +1,56 @@
 @charset "UTF-8";
 
+
+/* Importando fonte */
 @import url('https://fonts.googleapis.com/css2?family=Glory:wght@580&display=swap');
 
+/* Definindo cores para serem usados no projeto todo */
 :root {
     --cor_a: #2B2D42;
     --cor_b: #8D99AE;
     --cor_c: #EDF2F4;
     --cor_d: #DCDCDC;
-
 }
 
 :root {
+    --img01: url("Dreikkkkkk.jpg");
     --img03: url("buracuNegru.jpg")
 }
-
-:root {
-    --img01: url("Dreikkkkkk.jpg")
-}
-
+/* Definindo uma cor de fundo para o site inteiro e resetando a margen */
 body {
     background-color: var(--cor_c);
     margin: 0px;
-
 }
-
+/* Defino um header em flex e justify items/content para center, para centralizar a div dentro do header que contem o logo. */
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     background-color: var(--cor_a);
     margin: 0px;
-
+    z-index: 999;
     top: 0px;
     height: 100px;
 }
 
-.logo {
-
-    text-align: center;
+.logo img {
+    display: flex;
+    justify-content: center;
+    border-radius: 100vw;    
 }
 
 nav {
-    height: 100%;
+    height: 10vh;
     margin: 0px;
     padding: 0px;
     border: 0px;
     position: sticky;
     top: 0px;
+    z-index: 999;
 }
 
 .noticiaPrincipal {
-    margin-top: 8px;
+    margin: 16px;
     display: grid;
     grid-template-columns: 1fr 1350px 1fr;
     text-decoration: none;
@@ -69,15 +70,14 @@ nav {
 .text1 {
     padding-top: 0px;
     font-family: 'Glory';
-    text-align: justify;
     padding-right: 5px;
     padding-left: 5px;
     text-decoration: none;
     color: black;
 }
 
-.Principal>img {
-    width: 100%;
+.principalImg {
+    width: 150vh;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
 }
@@ -96,12 +96,12 @@ nav {
 }
 
 .box {
-
     box-shadow: grey 0px 5px 5px;
     border-radius: 3%;
     margin-right: 10px;
     padding-bottom: 25px;
     margin: 8px;
+    position: relative;
 }
 
 .box>img {
@@ -129,19 +129,26 @@ nav {
 
 .box:hover {
     animation: 0.2s;
-    animation-fill-mode: forwards;
     animation-name: box;
+    animation-fill-mode: forwards;
 
 }
 
 footer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding-top: 8px;
-    margin-bottom: 0px;
+    background-color: #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .by {
+    display: block;
     font-family: 'Glory';
     text-align: center;
     font-size: 120%;
@@ -157,6 +164,54 @@ footer {
     padding: 0px;
     margin-top: 0px;
 }
+
+form {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  fieldset {
+    border: none;
+    padding: 20px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+  }
+  
+  input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    width: 100px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
 
 @keyframes box {
     0% {
@@ -280,6 +335,8 @@ footer {
     transition: .6s;
 }
 
+
+/* Essas variavéis são aplicadas quando darkMode é adicionado ao body, deixando o site em modo escuro */
 .darkMode {
     background-color: var(--cor_a);
 }
@@ -300,15 +357,6 @@ footer {
     background-color: var(--cor_b);
 }
 
-.darkMode .principalImg {
-    content: var(--img03);
-
-}
-
 img {
     transition: .12s;
-}
-
-.darkMode .imgkkk {
-    content: var(--img01);
 }
