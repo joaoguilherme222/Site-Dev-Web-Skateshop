@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@580&display=swap');
+
+:root {
+    --cor_a: #2B2D42;
+    --cor_b: #8D99AE;
+    --cor_c: #EDF2F4;
+    --cor_d: #DCDCDC;
+
+}
+
+.dropdown-menu {
+    display: flex;
+    gap: 0px;
+    font-family: 'Glory';
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    width: 100%;
+
+}
+
+.dropdown-menu li {
+    width: 100%;
+    height: 40px;
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    background-color: var(--cor_b);
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all .2s linear;
+}
+
+.dropdown-menu li:hover>a {
+    background-color: var(--cor_a);
+    color: white;
+}
+
+.dropdown-menu li:hover>.dropdown-submenu {
+    display: block;
+}
+
+.dropdown-submenu {
+    margin-top: 1px;
+    display: none;
+    padding-left: 0px;
+}
+
+.dropdown-submenu a {
+    background-color: #00000080;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    font-size: .8rem;
+    border-left: 0px solid transparent;
+    color: var(--cor_c);
+}
+
+.dropdown-submenu li:hover>a {
+    border-left: 8px solid var(--cor_b);
+}
+
+.main.active {
+    background-color: black;
+}
