@@ -27,10 +27,9 @@ header {
     justify-content: center;
     justify-items: center;
     background-color: var(--cor_a);
-    margin: 0px;
     z-index: 999;
-    top: 0px;
-    height: 100px;
+    width: 100vw;
+    height: 20vh;
 }
 
 .logo img {
@@ -40,46 +39,33 @@ header {
 }
 
 nav {
-    height: 10vh;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+    height: 20vh;
     position: sticky;
-    top: 0px;
     z-index: 999;
-}
-
-.noticiaPrincipal {
-    margin: 16px;
-    display: grid;
-    grid-template-columns: 1fr 1350px 1fr;
-    text-decoration: none;
-
 }
 
 .Principal {
     box-shadow: grey 0px 5px 5px;
     border-radius: 3%;
-    margin-right: 10px;
     padding-bottom: 25px;
-    margin: 8px;
     text-decoration: none;
-
+    width: 100vw;
 }
 
 .text1 {
-    padding-top: 0px;
     font-family: 'Glory';
-    padding-right: 5px;
-    padding-left: 5px;
     text-decoration: none;
     color: black;
+    margin: 0 40px;
+}
+
+.text1 h1, .text h1{
+    text-align: center;
 }
 
 .principalImg {
-    width: 150vh;
-    border-top-left-radius: 3%;
-    border-top-right-radius: 3%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .Principal:hover {
